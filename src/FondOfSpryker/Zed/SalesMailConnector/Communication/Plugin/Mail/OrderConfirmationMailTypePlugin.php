@@ -10,14 +10,14 @@ class OrderConfirmationMailTypePlugin extends SprykerOrderConfirmationMailTypePl
 {
     /**
      * @param \Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface $mailBuilder
+     *
+     * @return void
      */
     public function build(MailBuilderInterface $mailBuilder): void
     {
         parent::build($mailBuilder);
 
-        $this
-            ->addIso2CodeToBillingAddress($mailBuilder);
-
+        $this->addIso2CodeToBillingAddress($mailBuilder);
     }
 
     /**
@@ -36,5 +36,4 @@ class OrderConfirmationMailTypePlugin extends SprykerOrderConfirmationMailTypePl
 
         return $this;
     }
-
 }
